@@ -6,7 +6,7 @@ If any of these public data repositories of data go down, the code will break
 
 Nexus stat's platinum price API: https://api.nexus-stats.com/warframe/v1/items?data=prices <br>
 Void relic table containing relics and where to get them: http://warframe.wikia.com/wiki/Void_Relic/DropLocationsByRelic<br>
-Void relic table containing drops from in game relics: http://warframe.wikia.com/wiki/Void_Relic/ByRewards/SimpleTable<br>
+Void relic table containing item drops from relics: http://warframe.wikia.com/wiki/Void_Relic/ByRewards/SimpleTable<br>
 
 ## Dependencies
 
