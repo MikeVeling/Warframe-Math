@@ -10,11 +10,12 @@ Void relic table containing item drops from relics: http://warframe.wikia.com/wi
 
 ## Dependencies
 
-This script is written in python 2.7 compatible code. The dependencies are beautifulsoup4 and scipy. To install simply run the following commands with your python 2.7 interpreter:
+This script is written in python 2.7 compatible code. The dependencies are beautifulsoup4, scipy and requests. To install simply run the following commands with your python 2.7 interpreter:
 
 ```
-python2.7 -m pip install beautifulsoup4
-python2.7 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+python2 -m pip install beautifulsoup4
+python2 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+python2 -m pip install requests
 ```
 ## Inputs
 
@@ -29,7 +30,7 @@ This code also requires some user provided data. Example tables containing these
 At this point, the code is simply run with no arguments from the command line. Within the code, there are user defined variables  that can be used to access its different functions independently. At this point, it runs all its functions together by default
 
 ```
-python2.7 Find_easy_path.py
+python2 Find_easy_path.py
 ```
 
 ## Outputs
