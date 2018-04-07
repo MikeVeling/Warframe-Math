@@ -1,5 +1,5 @@
 # Warframe math
-Tool for finding the fastest path to farm an item in Warframe
+Tool for finding the fastest path to farm items in Warframe
 
 ## Public data accessed
 If any of these public data repositories of data go down, the code will break
