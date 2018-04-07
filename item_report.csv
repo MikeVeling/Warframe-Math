@@ -1,0 +1,57 @@
+Item Name,Total Time (min),Relic Refinement,Void Traces Needed,Void Trace Missions Run,Void Trace time spent,Relics farmed,Number of Relics needed,Item drop from relic base prob,Item drop from relic effective prob,Item drop from relics confidence,Time spent cracking relics,Mission run,number of missions run,relic drop from mission prob,Relic drop from mission confidence,mission rotation needed,Time spent farming relics
+Nekros Prime Neuroptics Blueprint,1445,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Interception, Tier 3",83,0.125,0.900457567725,B,1245
+Nekros Prime Neuroptics Blueprint,1530,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Interception, Tier 3",93,0.125,0.901783914275,B,1395
+Nekros Prime Neuroptics Blueprint,1790,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Interception, Tier 3",112,0.125,0.900142441392,B,1680
+Nekros Prime Neuroptics Blueprint,1860,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Survival, Tier 4",83,0.125,0.900457567725,C,1660
+Nekros Prime Neuroptics Blueprint,1860,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Interception, Tier 3",83,0.125,0.900457567725,C,1660
+Nekros Prime Neuroptics Blueprint,1885,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Interception, Tier 3",122,0.125,0.90291685718,B,1830
+Nekros Prime Neuroptics Blueprint,1995,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Survival, Tier 4",93,0.125,0.901783914275,C,1860
+Nekros Prime Neuroptics Blueprint,1995,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Interception, Tier 3",93,0.125,0.901783914275,C,1860
+Nekros Prime Neuroptics Blueprint,2080,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Survival, Dark Sector 4",94,0.1111,0.903052807052,C,1880
+Nekros Prime Neuroptics Blueprint,2235,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Survival, Dark Sector 4",105,0.1111,0.902746608475,C,2100
+Nekros Prime Neuroptics Blueprint,2350,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Survival, Tier 4",112,0.125,0.900142441392,C,2240
+Nekros Prime Neuroptics Blueprint,2350,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Interception, Tier 3",112,0.125,0.900142441392,C,2240
+Nekros Prime Neuroptics Blueprint,2360,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Survival, Tier 3",108,0.0968,0.902587046234,C,2160
+Nekros Prime Neuroptics Blueprint,2360,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Survival, Derelict",108,0.0968,0.902587046234,C,2160
+Nekros Prime Neuroptics Blueprint,2360,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Survival, Dark Sector 3",108,0.0968,0.902587046234,C,2160
+Nekros Prime Neuroptics Blueprint,2360,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Excavation, Tier 3",108,0.0968,0.902587046234,C,2160
+Nekros Prime Neuroptics Blueprint,2360,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Defense, Tier 3",108,0.0968,0.902587046234,C,2160
+Nekros Prime Neuroptics Blueprint,2495,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Survival, Tier 4",122,0.125,0.90291685718,C,2440
+Nekros Prime Neuroptics Blueprint,2495,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Interception, Tier 3",122,0.125,0.90291685718,C,2440
+Nekros Prime Neuroptics Blueprint,2555,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Survival, Tier 3",121,0.0968,0.903999699982,C,2420
+Nekros Prime Neuroptics Blueprint,2555,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Survival, Derelict",121,0.0968,0.903999699982,C,2420
+Nekros Prime Neuroptics Blueprint,2555,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Survival, Dark Sector 3",121,0.0968,0.903999699982,C,2420
+Nekros Prime Neuroptics Blueprint,2555,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Excavation, Tier 3",121,0.0968,0.903999699982,C,2420
+Nekros Prime Neuroptics Blueprint,2555,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Defense, Tier 3",121,0.0968,0.903999699982,C,2420
+Nekros Prime Neuroptics Blueprint,2640,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Interception, Archwing",122,0.086,0.903754956616,C,2440
+Nekros Prime Neuroptics Blueprint,2650,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Survival, Dark Sector 4",127,0.1111,0.904057123376,C,2540
+Nekros Prime Neuroptics Blueprint,2684,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Defection, Tier 3",108,0.0968,0.902587046234,C,2484
+Nekros Prime Neuroptics Blueprint,2720,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Defense, Tier 3",168,0.0625,0.902521123296,B,2520
+Nekros Prime Neuroptics Blueprint,2795,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Survival, Dark Sector 4",137,0.1111,0.900465365838,C,2740
+Nekros Prime Neuroptics Blueprint,2855,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Interception, Archwing",136,0.086,0.90237700637,C,2720
+Nekros Prime Neuroptics Blueprint,2918,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Defection, Tier 3",121,0.0968,0.903999699982,C,2783
+Nekros Prime Neuroptics Blueprint,2940,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Defense, Tier 3",187,0.0625,0.90025038781,B,2805
+Nekros Prime Neuroptics Blueprint,3030,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Survival, Tier 3",146,0.0968,0.903958876486,C,2920
+Nekros Prime Neuroptics Blueprint,3030,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Survival, Derelict",146,0.0968,0.903958876486,C,2920
+Nekros Prime Neuroptics Blueprint,3030,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Survival, Dark Sector 3",146,0.0968,0.903958876486,C,2920
+Nekros Prime Neuroptics Blueprint,3030,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Excavation, Tier 3",146,0.0968,0.903958876486,C,2920
+Nekros Prime Neuroptics Blueprint,3030,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Defense, Tier 3",146,0.0968,0.903958876486,C,2920
+Nekros Prime Neuroptics Blueprint,3215,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Survival, Tier 3",158,0.0968,0.902552674314,C,3160
+Nekros Prime Neuroptics Blueprint,3215,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Survival, Derelict",158,0.0968,0.902552674314,C,3160
+Nekros Prime Neuroptics Blueprint,3215,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Survival, Dark Sector 3",158,0.0968,0.902552674314,C,3160
+Nekros Prime Neuroptics Blueprint,3215,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Excavation, Tier 3",158,0.0968,0.902552674314,C,3160
+Nekros Prime Neuroptics Blueprint,3215,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Defense, Tier 3",158,0.0968,0.902552674314,C,3160
+Nekros Prime Neuroptics Blueprint,3390,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Interception, Archwing",164,0.086,0.901818626563,C,3280
+Nekros Prime Neuroptics Blueprint,3468,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Defection, Tier 3",146,0.0968,0.903958876486,C,3358
+Nekros Prime Neuroptics Blueprint,3500,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Defense, Tier 3",226,0.0625,0.900962186186,B,3390
+Nekros Prime Neuroptics Blueprint,3560,Radiant,600,34,170,Axi N5,6,0.2,0.5904,0.905379371829,30,"Salvage, All",168,0.0625,0.902521123296,B,3360
+Nekros Prime Neuroptics Blueprint,3615,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Interception, Archwing",178,0.086,0.902280050122,C,3560
+Nekros Prime Neuroptics Blueprint,3689,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Defection, Tier 3",158,0.0968,0.902552674314,C,3634
+Nekros Prime Neuroptics Blueprint,3730,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Defense, Tier 3",245,0.0625,0.900631911624,B,3675
+Nekros Prime Neuroptics Blueprint,3875,Flawless,350,20,100,Axi N5,7,0.17,0.52541679,0.912678848298,35,"Salvage, All",187,0.0625,0.90025038781,B,3740
+Nekros Prime Neuroptics Blueprint,4630,Exceptional,225,13,65,Axi N5,9,0.13,0.42710239,0.919187017507,45,"Salvage, All",226,0.0625,0.900962186186,B,4520
+Nekros Prime Neuroptics Blueprint,4955,Intact,0,1,5,Axi N5,10,0.11,0.37257759,0.904405916915,50,"Salvage, All",245,0.0625,0.900631911624,B,4900
+Nekros Prime Neuroptics Blueprint,"No relic farm location found, assumed vaulted",Radiant,600,34,170,Meso F1,6,0.2,0.5904,0.905379371829,30,"No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted"
+Nekros Prime Neuroptics Blueprint,"No relic farm location found, assumed vaulted",Flawless,350,20,100,Meso F1,7,0.17,0.52541679,0.912678848298,35,"No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted"
+Nekros Prime Neuroptics Blueprint,"No relic farm location found, assumed vaulted",Exceptional,225,13,65,Meso F1,9,0.13,0.42710239,0.919187017507,45,"No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted"
+Nekros Prime Neuroptics Blueprint,"No relic farm location found, assumed vaulted",Intact,0,1,5,Meso F1,10,0.11,0.37257759,0.904405916915,50,"No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted","No relic farm location found, assumed vaulted"

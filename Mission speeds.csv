@@ -1,0 +1,110 @@
+Simple Mission Name,Rotation,Time,Drops Per Time
+"Capture, All",A,3,1
+"Defection, Tier 1",B,16,1
+"Defection, Tier 1",C,24,1
+"Defense, Dark Sector",A,5,1
+"Defense, Derelict",A,5,1
+"Defense, Tier 1",A,5,1
+"Excavation, Tier 1",B,10,1
+"Excavation, Tier 1",C,15,1
+"Interception, Tier 1",A,8,1
+"Rush, Archwing",C,16,1
+"Spy, Tier 1",B,10,1
+"Survival, Dark Sector 1",B,15,1
+"Survival, Dark Sector 1",C,20,1
+"Survival, Derelict",A,5,1
+"Survival, Tier 1",B,15,1
+"Survival, Tier 1",C,20,1
+"Bounty, 10-30, Final Stage",A,20,1
+"Bounty, 10-30, Final Stage",B,20,1
+"Bounty, 10-30, Final Stage",C,20,1
+"Bounty, 10-30, Stage 2, Stage 3 of 4, and Stage 3 of 5",A,20,1
+"Bounty, 10-30, Stage 2, Stage 3 of 4, and Stage 3 of 5",B,20,1
+"Bounty, 10-30, Stage 2, Stage 3 of 4, and Stage 3 of 5",C,20,1
+"Bounty, 10-30, Stage 4 of 5",A,20,1
+"Bounty, 10-30, Stage 4 of 5",B,20,1
+"Bounty, 10-30, Stage 4 of 5",C,20,1
+"Ghoul Bounty, 15-25, Final Stage",A,20,1
+"Ghoul Bounty, 15-25, Stage 2, Stage 3 of 4, and Stage 3 of 5",A,20,1
+"Ghoul Bounty, 15-25, Stage 4 of 5",A,20,1
+"Ghoul Bounty, 15-25, Stage 1",A,20,1
+"Bounty, 20-40, Final Stage",A,20,1
+"Bounty, 20-40, Stage 2, Stage 3 of 4, and Stage 3 of 5",A,20,1
+"Bounty, 20-40, Stage 4 of 5",A,20,1
+"Bounty, 20-40, Final Stage",B,20,1
+"Bounty, 20-40, Final Stage",C,20,1
+"Bounty, 20-40, Stage 2, Stage 3 of 4, and Stage 3 of 5",B,20,1
+"Bounty, 20-40, Stage 2, Stage 3 of 4, and Stage 3 of 5",C,20,1
+"Bounty, 20-40, Stage 4 of 5",B,20,1
+"Bounty, 20-40, Stage 4 of 5",C,20,1
+"Defection, Tier 2",B,16,1
+"Defense, Dark Sector",B,15,1
+"Defense, Dark Sector",C,20,1
+"Defense, Derelict",C,20,1
+"Defense, Tier 1",B,15,1
+"Defense, Tier 1",C,20,1
+"Defense, Tier 2",A,5,1
+"Excavation, Tier 2",B,10,1
+"Interception, Tier 1",B,10,1
+"Interception, Tier 1",C,15,1
+"Interception, Tier 2",A,5,1
+"Pursuit, Archwing",C,5,1
+"Spy, Kuva",B,12,1
+"Spy, Tier 2",C,15,1
+"Spy, Tier 3",B,12,1
+"Survival, Dark Sector 2",B,15,1
+"Survival, Tier 2",B,15,1
+"Defection, Tier 2",C,24,1
+"Defection, Tier 3",B,16,1
+"Defense, Tier 2",B,15,1
+"Defense, Tier 2",C,20,1
+"Defense, Tier 3",A,5,1
+"Excavation, Tier 2",C,20,1
+"Excavation, Tier 3",B,15,1
+"Interception, Tier 2",B,15,1
+"Interception, Tier 2",C,20,1
+"Interception, Tier 3",A,5,1
+"Salvage, All",A,10,1
+"Survival, Dark Sector 2",C,20,1
+"Survival, Dark Sector 3",B,15,1
+"Survival, Dark Sector 4",B,15,1
+"Survival, Derelict",B,15,1
+"Survival, Tier 2",C,20,1
+"Survival, Tier 3",B,15,1
+"Survival, Tier 4",B,15,1
+"Bounty, 30-50, Final Stage",C,20,1
+"Bounty, 30-50, Stage 2, Stage 3 of 4, and Stage 3 of 5",C,20,1
+"Bounty, 30-50, Stage 4 of 5",C,20,1
+"Ghoul Bounty, 40-50, Final Stage",A,20,1
+"Ghoul Bounty, 40-50, Stage 2, Stage 3 of 4, and Stage 3 of 5",A,20,1
+"Ghoul Bounty, 40-50, Stage 4 of 5",A,20,1
+"Bounty, 30-50, Final Stage",A,20,1
+"Bounty, 30-50, Final Stage",B,20,1
+"Bounty, 30-50, Stage 2, Stage 3 of 4, and Stage 3 of 5",A,20,1
+"Bounty, 30-50, Stage 2, Stage 3 of 4, and Stage 3 of 5",B,20,1
+"Bounty, 30-50, Stage 4 of 5",A,20,1
+"Bounty, 30-50, Stage 4 of 5",B,20,1
+"Ghoul Bounty, 40-50, Stage 1",A,20,1
+"Defection, Tier 3",C,23,1
+"Defense, Tier 3",B,15,1
+"Defense, Tier 3",C,20,1
+"Excavation, Tier 3",C,20,1
+"Interception, Archwing",C,20,1
+"Interception, Tier 3",B,15,1
+"Interception, Tier 3",C,20,1
+"Salvage, All",B,20,1
+"Survival, Dark Sector 3",C,20,1
+"Survival, Dark Sector 4",C,20,1
+"Survival, Derelict",C,20,1
+"Survival, Tier 3",C,20,1
+"Survival, Tier 4",C,20,1
+"Bounty, 40-60, Final Stage",B,20,1
+"Bounty, 40-60, Stage 2, Stage 3 of 4, and Stage 3 of 5",B,20,1
+"Bounty, 40-60, Stage 4 of 5",B,20,1
+"Bounty, 40-60, Final Stage",A,20,1
+"Bounty, 40-60, Final Stage",C,20,1
+"Bounty, 40-60, Stage 2, Stage 3 of 4, and Stage 3 of 5",A,20,1
+"Bounty, 40-60, Stage 2, Stage 3 of 4, and Stage 3 of 5",C,20,1
+"Bounty, 40-60, Stage 4 of 5",A,20,1
+"Bounty, 40-60, Stage 4 of 5",C,20,1
+"Pursuit, Archwing",A,20,1
