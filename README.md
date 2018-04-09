@@ -1,7 +1,7 @@
 # Warframe math
 This tool identifies the most efficient path for obtaining specific items in the game Warframe.
 
-The game contains items called items called Void Relics, which are essentially a box that contains 1 of several possible in game items. To obtain void relics, players must play particular mission that has a random chance of providing a particular relic (defined on the game wiki here: http://warframe.wikia.com/wiki/Void_Relic/DropLocationsByRelic). Once the player obtains the relic, that relic has a particular chance to provide the player with the desired item (defined here: http://warframe.wikia.com/wiki/Void_Relic/ByRewards/SimpleTable). The player can then to choose to sell the item to other players for in-game currency. The prices of these items are constantly fluctuating so I pull live data from NexusStat for current going prices of the items.
+The game contains items called items called Void Relics, which are essentially a box that contains 1 of several possible in game items. To obtain void relics, players must play particular missions that have a random chance of providing a particular relic (defined on the game wiki here: http://warframe.wikia.com/wiki/Void_Relic/DropLocationsByRelic). Once the player obtains the relic, that relic has a particular chance to provide the player with the desired item (defined here: http://warframe.wikia.com/wiki/Void_Relic/ByRewards/SimpleTable). The player can then to choose to sell the item to other players for in-game currency. The prices of these items are constantly fluctuating so I pull live data from NexusStat for current going prices of the items.
 
 
 ## Public data accessed
