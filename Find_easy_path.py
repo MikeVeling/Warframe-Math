@@ -1,5 +1,5 @@
 ################################################################################
-#                            User editable varables                            #
+#                           User editable variables                            #
 ################################################################################
 minimum_prob_required_item_drop_from_relic=0.90                                 #Set these values to some sort of string ('N/A') for example to use expected value probiblities instead of confidence probiblities (not reccomended, will sugest less farming time across the board)
 minimum_prob_required_relic_drop_from_missions=0.90                             #Set these values to some sort of string ('N/A') for example to use expected value probiblities instead of confidence probiblities (not reccomended, will sugest less farming time across the board)
@@ -19,7 +19,7 @@ nexux_stats_URL='https://api.nexus-stats.com/warframe/v1/items?data=prices'     
 what_plat_price_to_use='buying'                                                 #This key can be set to buying or selling to do calculations based on buying or selling prices
 
 ################################################################################
-#                             Defineing my objects                             #
+#                              Defining my objects                             #
 ################################################################################
 class item:
     def __init__(self,name):
@@ -119,7 +119,7 @@ class mission:
         return self.rotations_table[rotation]['timeings']
 
 ################################################################################
-#                    Defineing my data collection functions                    #
+#                     Defining my data collection functions                    #
 ################################################################################
 import urllib2, csv, os, math
 from operator import itemgetter
@@ -327,7 +327,7 @@ for table in tables:                                                           #
         relic_drop_dic[relic_name]=drop_options
 
 ################################################################################
-#                          definining probibility functions                    #
+#                           defining probibility functions                     #
 ################################################################################
 from scipy.stats import binom
 def calc_number_of_rounds_expected(prob, events):                               #This function will calculate the expected number of rounds you will need to obtain [events] worth of sucessful events
