@@ -1,5 +1,5 @@
 ################################################################################
-#                           User editable variables                            #
+#                            User editable varables                            #
 ################################################################################
 minimum_prob_required_item_drop_from_relic=0.90                                 #Set these values to some sort of string ('N/A') for example to use expected value probiblities instead of confidence probiblities (not reccomended, will sugest less farming time across the board)
 minimum_prob_required_relic_drop_from_missions=0.90                             #Set these values to some sort of string ('N/A') for example to use expected value probiblities instead of confidence probiblities (not reccomended, will sugest less farming time across the board)
@@ -19,7 +19,7 @@ nexux_stats_URL='https://api.nexus-stats.com/warframe/v1/items?data=prices'     
 what_plat_price_to_use='buying'                                                 #This key can be set to buying or selling to do calculations based on buying or selling prices
 
 ################################################################################
-#                              Defining my objects                             #
+#                             Defineing my objects                             #
 ################################################################################
 class item:
     def __init__(self,name):
@@ -119,7 +119,7 @@ class mission:
         return self.rotations_table[rotation]['timeings']
 
 ################################################################################
-#                     Defining my data collection functions                    #
+#                    Defineing my data collection functions                    #
 ################################################################################
 import urllib2, csv, os, math
 from operator import itemgetter
@@ -296,38 +296,38 @@ relic_drop_dic={}
 for table in tables:                                                           #Itterate over the relic type tables
     for relic_itter in table.find_all('tr',recursive=False)[1:]:               #itterate over the spicific relics in the table
         relic_name=str(relic_itter.find('td').get_text().split('\n')[0]).strip()
-        assert relic_name in relic_dic
-        assert len(relic_itter.find_all('td',recursive=False))==2
-        assert len(relic_itter.find_all('td',recursive=False)[1].find_all(
-                                                   'table', recursive=False))==1
-        relic_table=relic_itter.find_all('td',recursive=False)[1].find_all(
-                                                    'table', recursive=False)[0]
-        table_head=[str(th.get_text()).strip() for th in 
-                                          relic_table.find("tr").find_all("th")]
-        table_body=relic_table.find_all('tr')[1:]
-        drop_options=[table_head]
-        for row in table_body:
-            Type=str(row.find_all('td')[0].get_text()).strip()
-            Category=str(row.find_all('td')[1].get_text()).strip()
-            Rotation=str(row.find_all('td')[2].get_text()).strip()
-            Chance=float(str(row.find_all('td')[
-                                        3].get_text()).strip()[0:-1])/float(100)
-            next_line=[Type,Category,Rotation,Chance]
-            drop_options.append(next_line)
-            
-            simple_mission_name=Type+', '+Category
-            if simple_mission_name not in mission_dic:
-                mission_dic[simple_mission_name]=mission(simple_mission_name)
-            mission_dic[simple_mission_name].add_mission_type(Type)
-            mission_dic[simple_mission_name].add_mission_tier(Category)
-            mission_dic[simple_mission_name].add_drop_rotation_prob(
-                                                          relic_dic[relic_name],
-                                                          Rotation,
-                                                          Chance)
-        relic_drop_dic[relic_name]=drop_options
-
+        if relic_name != '':
+            assert relic_name in relic_dic
+            assert len(relic_itter.find_all('td',recursive=False))==2
+            assert len(relic_itter.find_all('td',recursive=False)[1].find_all(
+                                                    'table', recursive=False))==1
+            relic_table=relic_itter.find_all('td',recursive=False)[1].find_all(
+                                                        'table', recursive=False)[0]
+            table_head=[str(th.get_text()).strip() for th in 
+                                            relic_table.find("tr").find_all("th")]
+            table_body=relic_table.find_all('tr')[1:]
+            drop_options=[table_head]
+            for row in table_body:
+                Type=str(row.find_all('td')[0].get_text()).strip()
+                Category=str(row.find_all('td')[1].get_text()).strip()
+                Rotation=str(row.find_all('td')[2].get_text()).strip()
+                Chance=float(str(row.find_all('td')[
+                                            3].get_text()).strip()[0:-1])/float(100)
+                next_line=[Type,Category,Rotation,Chance]
+                drop_options.append(next_line)
+                
+                simple_mission_name=Type+', '+Category
+                if simple_mission_name not in mission_dic:
+                    mission_dic[simple_mission_name]=mission(simple_mission_name)
+                mission_dic[simple_mission_name].add_mission_type(Type)
+                mission_dic[simple_mission_name].add_mission_tier(Category)
+                mission_dic[simple_mission_name].add_drop_rotation_prob(
+                                                            relic_dic[relic_name],
+                                                            Rotation,
+                                                            Chance)
+            relic_drop_dic[relic_name]=drop_options
 ################################################################################
-#                           defining probibility functions                     #
+#                          definining probibility functions                    #
 ################################################################################
 from scipy.stats import binom
 def calc_number_of_rounds_expected(prob, events):                               #This function will calculate the expected number of rounds you will need to obtain [events] worth of sucessful events
