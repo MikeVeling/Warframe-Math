@@ -15,7 +15,7 @@ path_to_csv_file_with_relic_refinement_costs='Relic refinement table.csv'       
 path_to_csv_file_with_mission_speeds='Mission speeds.csv'                       #This var is the path to the mission speed table. This table needs to be filled out to get an idea of how quickly you can get relic drops
 void_traces_per_round=18                                                        #This is a guess of how many void traces you get per void trace farming run.
 time_per_trace_run=5                                                            #This is a guess of how long in mins it takes to run a void mission. Void mission runs both generate void traces and crack relics.
-nexux_stats_URL='https://api.nexushub.co/warframe/v1/items'                     #This is the API key for getting nexus stat prices
+nexux_stats_URL='https://api.nexushub.co/warframe/v1/items?data=prices'         #This is the API key for getting nexus stat prices
 what_plat_price_to_use='buying'                                                 #This key can be set to buying or selling to do calculations based on buying or selling prices
 
 ################################################################################
@@ -495,7 +495,7 @@ import json
 import requests
 
 item_name='Loki Prime Systems Blueprint'
-nexus_stats_URL=nexux_stats_URL
+nexus_stats_URL='https://api.nexushub.co/warframe/v1/items'
 
 response =requests.get(nexus_stats_URL)
 json_data=json.loads(response.text)
@@ -508,14 +508,12 @@ for json_object in json_data:
         if str(component_name).lower()==' set':
             component_name=''
         object_name=overall_name+component_name
-        if 'selling' in compoment:
-            selling_price=compoment['selling']['avg']
-            buying_price=compoment['buying']['avg']
-            combined_price=compoment['combined']['avg']
+        if 'prices' in compoment:
+            selling_price=compoment['prices']['selling']['current']['median']
+            buying_price=compoment['prices']['buying']['current']['median']
             prices_dictionary[object_name]={}
             prices_dictionary[object_name]['buying']=selling_price
             prices_dictionary[object_name]['selling']=buying_price
-            prices_dictionary[object_name]['combined']=combined_price
 
 def get_price(junk_item_name,what_plat_price_to_use):
     try:
