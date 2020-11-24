@@ -21,6 +21,12 @@ what_plat_price_to_use='buying'                                                 
 ################################################################################
 #                             Defineing my objects                             #
 ################################################################################
+import sys  
+from imp import reload
+
+#reload(sys)  
+#sys.setdefaultencoding('utf8')
+
 class item:
     def __init__(self,name):
         self.name=name
@@ -104,7 +110,7 @@ class mission:
         if rotation not in self.rotations_table:
             missions_timeing_table.append([self.name,rotation,'',''])
             the_saver(path_to_csv_file_with_mission_speeds,
-                      missions_timeing_table)
+                      missions_timeing_table,encoding='utf-8')
             self.add_rotation_timeing(rotation,'','')
         if 'drop_table' not in self.rotations_table[rotation]:
             self.rotations_table[rotation]['drop_table']=[]
@@ -121,15 +127,16 @@ class mission:
 ################################################################################
 #                    Defineing my data collection functions                    #
 ################################################################################
-import urllib2, csv, os, math
+import urllib, csv, os, math, codecs
 from operator import itemgetter
 from bs4 import BeautifulSoup
 
-def the_opener(file_path):
+def the_opener(file_path,encoding='utf-16-le'):
     if '.csv' in file_path:
         return_list=[]
-        with open(file_path, 'rb') as csvfile:
-            for row in csv.reader(csvfile, dialect='excel'):
+        with codecs.open(file_path, encoding=encoding, errors='ignore') as csvfile:
+            reader=csv.reader(csvfile)
+            for row in reader:
                 return_list.append(row)
     elif '.tsv' in file_path or '.txt' in file_path:
         return_list=[]
@@ -139,13 +146,14 @@ def the_opener(file_path):
                 return_list.append(row.split('\t'))
     return return_list
     
-def the_saver(output_path, list_of_lists):
-    with open(output_path,'wb') as csvfile:
-        for row in list_of_lists:
-            csv.writer(csvfile, dialect='excel').writerow(row)
+def the_saver(output_path, list_of_lists, encoding='utf-16-le'):
+    f = open(output_path,'w', newline='', encoding=encoding)
+    writer = csv.writer(f, delimiter=',')
+    writer.writerows(list_of_lists)
+    f.close()
 
 def get_HTML_table(URL,table_class,table_count=0):
-    html=urllib2.urlopen(URL).read()
+    html=urllib.request.urlopen(URL).read()
     soup = BeautifulSoup(html, "lxml")
     table = soup.find("table", attrs={"class":table_class})
     headings = [th.get_text() for th in table.find("tr").find_all("th")]
@@ -188,7 +196,14 @@ def sort_data_by_ID(ID,data,header_size=1,reverse=False):
                 next_line.append(col)
         if next_line != []:
             sorting_data.append(next_line)
-    return_data_float=sorted(sorting_data,key=itemgetter(sort_column),
+    sorting_data_final=[]
+    hold_blanks=[]
+    for row in sorting_data:
+        if is_number(row[sort_column]):
+            sorting_data_final.append(row)
+        else:
+            hold_blanks.append(row)
+    return_data_float=sorted(sorting_data_final,key=itemgetter(sort_column),
                              reverse=True)
     return_data_string=[]
     for row in return_data_float:
@@ -200,7 +215,6 @@ def sort_data_by_ID(ID,data,header_size=1,reverse=False):
                 next_line.append(str(col))
         return_data_string.append(next_line)
     return_data_string_processed=[]
-    hold_blanks=[]
     for row in return_data_string:
         if row[sort_column] == '':
             hold_blanks.append(row)
@@ -221,7 +235,7 @@ import sys
 mission_timeing_dic={}
 mission_dic={}
 if os.path.isfile(path_to_csv_file_with_mission_speeds):
-    missions_timeing_table=the_opener(path_to_csv_file_with_mission_speeds)
+    missions_timeing_table=the_opener(path_to_csv_file_with_mission_speeds,encoding='utf-8')
 else:
     missions_timeing_table=[['Simple Mission Name','Rotation','Time',
                             'Drops Per Time']]
@@ -240,9 +254,11 @@ for row in missions_timeing_table[1:]:
 #                           importing refinement data                          #
 ################################################################################
 relic_rarity_drop_rates=the_opener(
-                    path_to_csv_file_with_relic_item_drop_rates_based_on_rarity)
+                    path_to_csv_file_with_relic_item_drop_rates_based_on_rarity,
+                    encoding='utf-8')
 relic_refinement_cost_table=the_opener(
-                                   path_to_csv_file_with_relic_refinement_costs)
+                                   path_to_csv_file_with_relic_refinement_costs,
+                                   encoding='utf-8')
 
 refinement_dic={}
 refinement_order=[]
@@ -288,44 +304,46 @@ for row in pre_procesed_item_relic_table[1:]:
 URL_void_relic_drops=(
 'http://warframe.wikia.com/wiki/Void_Relic/DropLocationsByRelic')
 table_class="sortable"
-html=urllib2.urlopen(URL_void_relic_drops).read()
+html=urllib.request.urlopen(URL_void_relic_drops).read()
 soup = BeautifulSoup(html, 'lxml')
 table_class="article-table"
 tables = soup.find_all("table", attrs={"class":table_class})                    #At this point, I have grabbed the relic tables based on type (Lith, meso, neo, axi, exe). Theste tables will be parsed in the following for loops
 relic_drop_dic={}
 for table in tables:                                                           #Itterate over the relic type tables
-    for relic_itter in table.find_all('tr',recursive=False)[1:]:               #itterate over the spicific relics in the table
-        relic_name=str(relic_itter.find('td').get_text().split('\n')[0]).strip()
-        if relic_name != '':
-            assert relic_name in relic_dic
-            assert len(relic_itter.find_all('td',recursive=False))==2
-            assert len(relic_itter.find_all('td',recursive=False)[1].find_all(
-                                                    'table', recursive=False))==1
-            relic_table=relic_itter.find_all('td',recursive=False)[1].find_all(
-                                                        'table', recursive=False)[0]
-            table_head=[str(th.get_text()).strip() for th in 
-                                            relic_table.find("tr").find_all("th")]
-            table_body=relic_table.find_all('tr')[1:]
-            drop_options=[table_head]
-            for row in table_body:
-                Type=str(row.find_all('td')[0].get_text()).strip()
-                Category=str(row.find_all('td')[1].get_text()).strip()
-                Rotation=str(row.find_all('td')[2].get_text()).strip()
-                Chance=float(str(row.find_all('td')[
-                                            3].get_text()).strip()[0:-1])/float(100)
-                next_line=[Type,Category,Rotation,Chance]
-                drop_options.append(next_line)
-                
-                simple_mission_name=Type+', '+Category
-                if simple_mission_name not in mission_dic:
-                    mission_dic[simple_mission_name]=mission(simple_mission_name)
-                mission_dic[simple_mission_name].add_mission_type(Type)
-                mission_dic[simple_mission_name].add_mission_tier(Category)
-                mission_dic[simple_mission_name].add_drop_rotation_prob(
-                                                            relic_dic[relic_name],
-                                                            Rotation,
-                                                            Chance)
-            relic_drop_dic[relic_name]=drop_options
+    for relic_itter in table.find_all('tr',recursive=True)[1:]:               #itterate over the spicific relics in the table
+        if '<li>' in str(relic_itter):
+            relic_name=str(relic_itter.find('td').get_text().split('\n')[0]).strip()
+            print(relic_name)
+            if relic_name != '':
+                assert relic_name in relic_dic
+    #            assert len(relic_itter.find_all('td',recursive=True))==2
+                assert len(relic_itter.find_all('td',recursive=True)[1].find_all(
+                                                        'table', recursive=True))==1
+                relic_table=relic_itter.find_all('td',recursive=True)[1].find_all(
+                                                            'table', recursive=True)[0]
+                table_head=[str(th.get_text()).strip() for th in 
+                                                relic_table.find("tr").find_all("th")]
+                table_body=relic_table.find_all('tr')[1:]
+                drop_options=[table_head]
+                for row in table_body:
+                    Type=str(row.find_all('td')[0].get_text()).strip()
+                    Category=str(row.find_all('td')[1].get_text()).strip()
+                    Rotation=str(row.find_all('td')[2].get_text()).strip()
+                    Chance=float(str(row.find_all('td')[
+                                                3].get_text()).strip()[0:-1])/float(100)
+                    next_line=[Type,Category,Rotation,Chance]
+                    drop_options.append(next_line)
+                    
+                    simple_mission_name=Type+', '+Category
+                    if simple_mission_name not in mission_dic:
+                        mission_dic[simple_mission_name]=mission(simple_mission_name)
+                    mission_dic[simple_mission_name].add_mission_type(Type)
+                    mission_dic[simple_mission_name].add_mission_tier(Category)
+                    mission_dic[simple_mission_name].add_drop_rotation_prob(
+                                                                relic_dic[relic_name],
+                                                                Rotation,
+                                                                Chance)
+                relic_drop_dic[relic_name]=drop_options
 ################################################################################
 #                          definining probibility functions                    #
 ################################################################################
@@ -383,7 +401,7 @@ def get_path_table(item_name, item_count_needed=1):
             else:
                 effective_prob_item_from_relic=prob_item_from_relic
             if not isinstance(minimum_prob_required_item_drop_from_relic, 
-                              basestring):
+                              str):
                 relic_count_needed,confidence_item=(
                     calc_number_of_rounds_with_confidence(
                         effective_prob_item_from_relic,
@@ -415,7 +433,7 @@ def get_path_table(item_name, item_count_needed=1):
                     prob_relic_from_rotation=mission_line[-1]
                     if not isinstance(
                         minimum_prob_required_relic_drop_from_missions, 
-                        basestring):
+                        str):
                         #seeing that this var is a string, we continue:
                         mission_count_needed,confidence_relics=(
                         calc_number_of_rounds_with_confidence(
